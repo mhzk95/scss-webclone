@@ -1,0 +1,311 @@
+$primary-color: #ffda45;
+$secondary-color: #253035;
+$blue-shade: #4dc4c4;
+$gray-shade: #9da9ad;
+
+// Navbar
+.navContainer {
+  .logo {
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px 20px;
+    clip-path: ellipse(70% 80% at 25% 25%);
+  }
+}
+.menu-1 {
+  margin-left: 10%;
+}
+
+// first-section
+
+.firstSection {
+  padding: 7rem 0 5rem;
+}
+
+.left-section {
+  margin-bottom: 30px;
+  font-size: 3rem;
+  span {
+    text-decoration: underline;
+    text-decoration-color: $primary-color;
+    text-underline-offset: 5px;
+  }
+}
+
+.rightSection {
+  p {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  button {
+    background-color: $primary-color;
+    border-radius: 25px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
+  a {
+    color: $secondary-color;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 900px) {
+  .rightSection {
+    p {
+      margin-left: 10px;
+    }
+    a {
+      display: block;
+      margin-left: 10px;
+    }
+  }
+}
+
+//section section
+
+.secondSection {
+  img {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+  }
+  .bottomSection {
+    background-color: $secondary-color;
+  }
+}
+.bottomSection {
+  .box {
+    color: rgb(255, 255, 255);
+    i {
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+    h1 {
+      color: $primary-color;
+    }
+  }
+}
+
+//third Section
+@mixin box {
+  width: 80px;
+  height: 80px;
+  z-index: -1;
+  background-color: $primary-color;
+  position: absolute;
+}
+
+.thirdSection {
+  .quadrant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .quad {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .box-1 {
+        @include box;
+        bottom: -30px;
+        left: -30px;
+        clip-path: ellipse(51% 51% at 96% 3%);
+      }
+      .box-2 {
+        @include box;
+        background-color: $gray-shade;
+        top: -25px;
+        right: -25px;
+        clip-path: ellipse(56% 55% at 0% 99%);
+      }
+      .box-3 {
+        @include box;
+        background-color: $blue-shade;
+        bottom: -30px;
+        right: 0;
+        clip-path: ellipse(56% 55% at 96% 1%);
+      }
+      .box-4 {
+        @include box;
+        background-color: $blue-shade;
+        clip-path: ellipse(56% 55% at 1% 97%);
+      }
+      .box-5 {
+        @include box;
+        clip-path: ellipse(56% 55% at 1% 1%);
+        right: -30px;
+      }
+      .box-6 {
+        @include box;
+        background-color: $gray-shade;
+        clip-path: ellipse(56% 55% at 1% 1%);
+        bottom: -30px;
+        right: -30px;
+      }
+    }
+  }
+}
+
+.topSection {
+  span {
+    text-decoration: underline;
+    text-decoration-color: $primary-color;
+    text-underline-offset: 10px;
+  }
+}
+.topSection p {
+  padding: 0 10rem;
+}
+.thirdSection i {
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 600px) {
+  .topSection p {
+    padding: 0 1rem;
+  }
+}
+
+//fourth Section
+@mixin num {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  clip-path: ellipse(56% 55% at 0% 100%);
+}
+
+.fourthSection {
+  display: flex;
+  justify-content: center;
+  .f-button {
+    background-color: $primary-color;
+    border-radius: 20px;
+    padding: 5px 20px;
+    font-weight: 500;
+  }
+}
+
+.f-topSection {
+  P {
+    padding: 0 10rem;
+  }
+}
+.f-box {
+  .imgNum {
+    position: relative;
+    img {
+      width: 100%;
+      height: 35vh;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .number {
+      position: absolute;
+      bottom: -8px;
+      left: 35px;
+      z-index: 10;
+      font-weight: 600;
+      color: white;
+    }
+    .num-1 {
+      @include num;
+      background-color: $primary-color;
+    }
+    .num-2 {
+      @include num;
+      background-color: $gray-shade;
+    }
+    .num-3 {
+      @include num;
+      background-color: $blue-shade;
+    }
+  }
+}
+.background {
+  width: 90%;
+  background-color: rgb(233, 255, 248);
+  height: 55vh;
+  position: absolute;
+  z-index: -1;
+}
+
+@media screen and (max-width: 900px) {
+  .f-topSection p {
+    padding: 0 2rem;
+  }
+}
+
+// Fifth Section
+
+.fifthSection {
+  background-color: rgb(237, 237, 237);
+}
+
+.v-topSection h1 span {
+  text-decoration: underline;
+  text-decoration-color: $primary-color;
+  text-underline-offset: 5px;
+}
+.v-topSection .box {
+  background-color: white;
+  &:hover {
+    box-shadow: 0 2px 8px 0 rgb(0, 0, 0, 0.2);
+  }
+}
+.rating {
+  display: flex;
+  justify-content: space-between;
+  p span {
+    color: teal;
+  }
+  .name {
+    font-weight: 700;
+  }
+}
+
+//Sixth Section
+
+.sixthSection {
+  .underline {
+    text-decoration: underline;
+    text-decoration-color: $primary-color;
+    text-underline-offset: 5px;
+  }
+  .f-box {
+    img {
+      width: 100%;
+      height: 35vh;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+  }
+  .f-button {
+    background-color: $primary-color;
+    border-radius: 20px;
+    padding: 5px 20px;
+    font-weight: 500;
+  }
+}
+
+//Footer
+
+.footer {
+  color: white;
+  background-color: $secondary-color;
+  .footerButton {
+    background-color: $primary-color;
+    padding: 5px 25px;
+    border-radius: 25px;
+    margin-top: 25px;
+  }
+  .copyright {
+    background-color: #252e33;
+  }
+  .footerInput {
+    background-color: $secondary-color;
+  }
+}
